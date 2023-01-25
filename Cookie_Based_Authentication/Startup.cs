@@ -27,6 +27,7 @@ namespace WebApp_UnderTheHood
                 options =>
                 {
                     options.Cookie.Name = "MyCookieAuth";
+                    options.LoginPath = "/Login/_Login";
                 }
              );
             services.AddRazorPages();
