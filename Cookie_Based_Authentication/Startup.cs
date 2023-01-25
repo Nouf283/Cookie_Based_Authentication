@@ -28,8 +28,14 @@ namespace WebApp_UnderTheHood
                 {
                     options.Cookie.Name = "MyCookieAuth";
                     options.LoginPath = "/Login/_Login";
+                    options.AccessDeniedPath = "/Account/AccessDenied";
                 }
              );
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("MustBelongToHRDepartment",
+                    policy => policy.RequireClaim("Department", "HR"));
+            });
             services.AddRazorPages();
         }
 

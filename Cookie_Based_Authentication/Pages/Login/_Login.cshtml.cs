@@ -18,12 +18,13 @@ namespace Cookie_Based_Authentication.Pages.Login
         {
             if (!ModelState.IsValid) return Page();
 
-            if(Credential.UserName == "admin" && Credential.Password == "password")
+            if (Credential.UserName == "admin" && Credential.Password == "password")
             {
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name,"admin"),
-                     new Claim(ClaimTypes.Email,"admin@gmail.com")
+                     new Claim(ClaimTypes.Email,"admin@gmail.com"),
+                       new Claim("Department", "HR")
                 };
                 var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);

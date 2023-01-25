@@ -20,8 +20,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Projects/Cookie_Based_Authentication/Cookie_Based_Authentication/Pages/HumanResource.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSHVtYW5SZXNvdXJjZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Projects/Cookie_Based_Authentication/Cookie_Based_Authentication/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/Cookie_Based_Authentication/Cookie_Based_Authentication/Pages/Login/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5cQWNjZXNzRGVuaWVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Projects/Cookie_Based_Authentication/Cookie_Based_Authentication/Pages/Login/_Login.cshtml]
