@@ -23,10 +23,11 @@ namespace Cookie_Based_Authentication.Pages.Login
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.Name,"admin"),
-                     new Claim(ClaimTypes.Email,"admin@gmail.com"),
-                       new Claim("Department", "HR"),
-                        new Claim("Admin", "true"),
-                    new Claim("Manager", "true")
+                    new Claim(ClaimTypes.Email,"admin@gmail.com"),
+                    new Claim("Department", "HR"),
+                    new Claim("Admin", "true"),
+                    new Claim("Manager", "true"),
+                    new Claim("EmploymentDate", "2020-02-01")
                 };
                 var identity = new ClaimsIdentity(claims, "MyCookieAuth");
                 ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(identity);

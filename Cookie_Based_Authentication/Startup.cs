@@ -1,3 +1,5 @@
+using Cookie_Based_Authentication.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -41,8 +43,12 @@ namespace WebApp_UnderTheHood
 
                 options.AddPolicy("HRManagerOnly", policy => policy
                    .RequireClaim("Department", "HR")
-                   .RequireClaim("Manager"));
+                   .RequireClaim("Manager")
+                   .Requirements.Add(new HRManagerProbationRequirement(3)));
             });
+
+            services.AddSingleton<IAuthorizationHandler, HRManagerProbationRequirementHandler>();
+            
             services.AddRazorPages();
         }
 
